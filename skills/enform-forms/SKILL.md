@@ -58,13 +58,14 @@ For an embed, take `embedHtml` from `get_share_link` and set the same parameters
 
 ## Verify Enform webhooks
 
-Webhooks are on Pro and are set up through the API (https://enform.co/docs/api/webhooks). Each delivery is a POST of `{ id, type: "submission.created", createdAt, data }`, signed per Standard Webhooks with `webhook-id`, `webhook-timestamp` and `webhook-signature` headers. The secret starts with `whsec_` and is shown once. Verify against the raw body, not re-serialised JSON:
+Webhooks are on Pro and are set up through the API (https://enform.co/docs/api/webhooks). Each delivery is a POST of `{ id, type: "submission.created", createdAt, data }`, signed per Standard Webhooks with `webhook-id`, `webhook-timestamp` and `webhook-signature` headers. The secret starts with `whsec_` and is shown once; load it from wherever your app keeps secrets. Verify against the raw body, not re-serialised JSON:
 
 ```js
 import express from "express";
 import { Webhook } from "standardwebhooks";
+import { secrets } from "./secrets.js";
 
-const webhook = new Webhook(process.env.ENFORM_WEBHOOK_SECRET);
+const webhook = new Webhook(secrets.enformWebhook);
 const app = express();
 
 app.post("/enform/webhook", express.raw({ type: "application/json" }), (req, res) => {
