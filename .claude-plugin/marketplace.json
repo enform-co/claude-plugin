@@ -1,0 +1,15 @@
+{
+  "name": "enform",
+  "description": "Enform's plugins for Claude Code",
+  "owner": {
+    "name": "Enform",
+    "email": "hello@enform.co"
+  },
+  "plugins": [
+    {
+      "name": "enform",
+      "source": "./",
+      "description": "Build, publish and share Enform surveys and forms from Claude, then read what people answered."
+    }
+  ]
+}

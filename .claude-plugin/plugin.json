@@ -1,0 +1,20 @@
+{
+  "name": "enform",
+  "displayName": "Enform",
+  "version": "1.0.0",
+  "description": "Build, publish and share Enform surveys and forms from Claude, then read what people answered.",
+  "author": {
+    "name": "Enform",
+    "email": "hello@enform.co",
+    "url": "https://enform.co"
+  },
+  "homepage": "https://enform.co/docs/mcp",
+  "repository": "https://github.com/enform-co/claude-plugin",
+  "license": "MIT",
+  "keywords": ["forms", "surveys", "feedback", "nps", "mcp"],
+  "icon": "./icon.png",
+  "documentationUrl": "https://enform.co/docs/mcp",
+  "supportUrl": "https://enform.co/support",
+  "privacyPolicyUrl": "https://enform.co/privacy",
+  "termsOfServiceUrl": "https://enform.co/terms"
+}

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "enform": {
+      "type": "http",
+      "url": "https://api.enform.co/api/mcp"
+    }
+  }
+}
